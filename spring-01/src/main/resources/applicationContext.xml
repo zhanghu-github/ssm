@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 所有Java类都可配置spring bean（Java对象） -->
+    <!-- Java对象的属性可在这里配置注入值-->
+
+    <bean id="stone" class="com.zh.axe.StoneAxe"></bean>
+
+    <bean id="iron" class="com.zh.axe.IronAxe"></bean>
+
+    <bean id="person" class="com.zh.model.Person">
+        <property name="axe" ref="iron"/> <!-- 依赖注入 -->
+    </bean>
+
+</beans>
